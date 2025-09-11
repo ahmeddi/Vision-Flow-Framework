@@ -1,0 +1,22 @@
+[
+  {
+    "model_name": "yolov8n",
+    "model_type": "yolo",
+    "map50": 0.995,
+    "map50_95": 0.8955,
+    "latency_ms": 148.25,
+    "fps": 6.75,
+    "total_parameters": 3011043,
+    "model_size_mb": 5.95
+  },
+  {
+    "model_name": "yolov8s",
+    "model_type": "yolo",
+    "map50": 0.998,
+    "map50_95": 0.920,
+    "latency_ms": 156.30,
+    "fps": 6.40,
+    "total_parameters": 11136374,
+    "model_size_mb": 21.5
+  }
+]

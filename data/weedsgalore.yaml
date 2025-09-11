@@ -1,0 +1,82 @@
+# WeedsGalore Multispectral UAV Dataset Configuration
+# Multispectral UAV imagery for weed detection in precision agriculture
+# Dataset: Drone-acquired multispectral data with RGB + NIR channels
+
+path: c:/Users/smart/Downloads/vff/data/weedsgalore
+train: images/train
+val: images/val
+test: images/test
+
+# Number of classes
+nc: 15
+
+# Class names (common weeds detected from UAV)
+names:
+  0: Broadleaf_Plantain
+  1: Dandelion
+  2: Clover
+  3: Chickweed
+  4: Crabgrass
+  5: Annual_Bluegrass
+  6: Lambsquarters
+  7: Pigweed
+  8: Foxtail
+  9: Bindweed
+  10: Thistle
+  11: Wild_Oats
+  12: Volunteer_Canola
+  13: Wild_Mustard
+  14: Background_Crop
+
+# Spectral bands configuration
+bands:
+  - name: Red
+    wavelength: 660
+    description: Red band for vegetation analysis
+  - name: Green
+    wavelength: 560
+    description: Green band for standard RGB
+  - name: Blue
+    wavelength: 480
+    description: Blue band for standard RGB
+  - name: NIR
+    wavelength: 840
+    description: Near-infrared for vegetation health
+  - name: RedEdge
+    wavelength: 730
+    description: Red edge for chlorophyll content
+
+# Dataset characteristics
+resolution:
+  spatial: "5cm per pixel"
+  spectral: "5 bands (RGB + NIR + RedEdge)"
+
+flight_parameters:
+  altitude: "50-100m AGL"
+  overlap: "80% forward, 70% side"
+  camera: "Micasense RedEdge-MX"
+
+# Dataset info
+info: |
+  WeedsGalore multispectral UAV dataset for precision weed detection.
+
+  Features:
+  - 5-band multispectral imagery (RGB + NIR + RedEdge)
+  - High spatial resolution (5cm/pixel)
+  - UAV-acquired from 50-100m altitude
+  - Multiple field types and crop stages
+  - Segmentation masks for precise boundaries
+  - NDVI and other vegetation indices included
+
+  Applications:
+  - Precision spraying with drones
+  - Weed density mapping
+  - Treatment efficacy monitoring  
+  - Multi-temporal change detection
+  - Variable rate application
+
+  Data structure:
+  - RGB composite images for standard detection
+  - Individual band TIFFs for spectral analysis
+  - Vegetation index layers (NDVI, GNDVI, etc.)
+  - JSON annotations with polygon segmentation

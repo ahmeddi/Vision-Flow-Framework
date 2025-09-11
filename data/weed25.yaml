@@ -1,0 +1,52 @@
+# Weed25 Dataset Configuration
+# 25 species of common weeds for agricultural detection
+# Dataset: https://github.com/weed25/weed25-dataset
+
+path: c:/Users/smart/Downloads/vff/data/weed25
+train: images/train
+val: images/val
+test: images/test
+
+# Number of classes
+nc: 25
+
+# Class names (25 weed species)
+names:
+  0: Common_Lambsquarters
+  1: Common_Ragweed
+  2: Giant_Ragweed
+  3: Common_Cocklebur
+  4: Velvetleaf
+  5: Waterhemp
+  6: Palmer_Amaranth
+  7: Redroot_Pigweed
+  8: Common_Purslane
+  9: Wild_Mustard
+  10: Field_Pennycress
+  11: Shepherds_Purse
+  12: Common_Chickweed
+  13: Henbit
+  14: Purple_Deadnettle
+  15: Field_Bindweed
+  16: Wild_Buckwheat
+  17: Common_Sunflower
+  18: Giant_Foxtail
+  19: Large_Crabgrass
+  20: Barnyardgrass
+  21: Fall_Panicum
+  22: Johnsongrass
+  23: Shattercane
+  24: Volunteer_Corn
+
+# Dataset info
+info: |
+  Weed25 dataset contains 25 species of common agricultural weeds.
+  Images collected from various field conditions across different growth stages.
+  Annotations include bounding boxes and species classification.
+
+  Dataset characteristics:
+  - 25 weed species
+  - ~10,000+ images
+  - Multiple growth stages
+  - Various field conditions
+  - High-resolution images (300-2000px)

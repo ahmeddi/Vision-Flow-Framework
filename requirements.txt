@@ -1,17 +1,58 @@
+# Core ML frameworks
 torch>=2.2.0
 torchvision>=0.17.0
-tqdm
-pandas
-numpy
-yaml
-pyyaml
-opencv-python
-requests
-scikit-learn
-matplotlib
-seaborn
-onnx
-onnxruntime
-psutil
-pynvml
-ultralytics>=8.1.0
+ultralytics>=8.2.0
+
+# Computer vision
+opencv-python>=4.8.0
+Pillow>=9.5.0
+albumentations>=1.3.0
+
+# Data processing
+pandas>=2.0.0
+numpy>=1.24.0
+scipy>=1.11.0
+scikit-learn>=1.3.0
+
+# Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+plotly>=5.15.0
+
+# Utilities
+tqdm>=4.65.0
+pyyaml>=6.0
+requests>=2.31.0
+psutil>=5.9.0
+pynvml>=11.5.0
+
+# Model export and optimization
+onnx>=1.14.0
+onnxruntime>=1.15.0
+
+# Enhanced model architectures
+super-gradients>=3.1.0  # YOLO-NAS
+yolox>=0.3.0           # YOLOX models
+timm>=0.9.0            # EfficientDet backbones
+efficientdet-pytorch>=0.4.0  # EfficientDet
+transformers>=4.30.0   # DETR models
+torch-audio>=2.0.0
+
+# YOLOv7 support (would need to clone repo separately)
+# git+https://github.com/WongKinYiu/yolov7.git
+
+# PP-YOLOE support (PaddleDetection)
+# paddlepaddle>=2.5.0
+# paddledet>=2.6.0
+
+# Statistical analysis
+statsmodels>=0.14.0
+pingouin>=0.5.0
+
+# Experiment tracking
+wandb>=0.15.0
+
+# Additional dependencies for specialized datasets
+h5py>=3.8.0           # For HDF5 data files
+rasterio>=1.3.0        # For multispectral TIFF processing
+spectral>=0.23.0       # For hyperspectral analysis

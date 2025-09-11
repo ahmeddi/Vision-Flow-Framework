@@ -1,0 +1,65 @@
+# CWD30 Dataset Configuration
+# Crop and Weed Detection with 30 classes (20 weeds + 10 crops)
+# Dataset: Comprehensive agricultural detection dataset
+
+path: c:/Users/smart/Downloads/vff/data/cwd30
+train: images/train
+val: images/val
+test: images/test
+
+# Number of classes (20 weeds + 10 crops)
+nc: 30
+
+# Class names
+names:
+  # Weed classes (0-19)
+  0: Amaranthus_retroflexus
+  1: Chenopodium_album
+  2: Cirsium_arvense
+  3: Convolvulus_arvensis
+  4: Digitaria_sanguinalis
+  5: Echinochloa_crus-galli
+  6: Galium_aparine
+  7: Lamium_amplexicaule
+  8: Polygonum_aviculare
+  9: Rumex_obtusifolius
+  10: Setaria_viridis
+  11: Sinapis_arvensis
+  12: Solanum_nigrum
+  13: Stellaria_media
+  14: Taraxacum_officinale
+  15: Trifolium_repens
+  16: Urtica_dioica
+  17: Veronica_persica
+  18: Viola_arvensis
+  19: Plantago_major
+
+  # Crop classes (20-29)
+  20: Triticum_aestivum # Wheat
+  21: Zea_mays # Corn/Maize
+  22: Glycine_max # Soybean
+  23: Brassica_napus # Canola/Rapeseed
+  24: Helianthus_annuus # Sunflower
+  25: Beta_vulgaris # Sugar beet
+  26: Solanum_tuberosum # Potato
+  27: Hordeum_vulgare # Barley
+  28: Avena_sativa # Oats
+  29: Pisum_sativum # Peas
+
+# Dataset info
+info: |
+  CWD30 (Crop-Weed Detection 30) dataset for precision agriculture.
+  Contains 20 common weed species and 10 major crop types.
+
+  Features:
+  - 30 classes total (20 weeds + 10 crops)
+  - Multi-stage growth images
+  - Field conditions with mixed crops/weeds
+  - Annotated with bounding boxes and segmentation masks
+  - Suitable for crop vs weed classification
+
+  Applications:
+  - Precision herbicide application
+  - Crop protection
+  - Yield optimization
+  - Automated weed management

@@ -1,0 +1,45 @@
+# DeepWeeds Dataset Configuration
+# 8 weed species from Australian rangelands
+# Dataset: https://github.com/AlexOlsen/DeepWeeds
+
+path: c:/Users/smart/Downloads/vff/data/deepweeds
+train: images/train
+val: images/val
+test: images/test
+
+# Number of classes
+nc: 8
+
+# Class names (8 weed species)
+names:
+  0: Chinee_Apple
+  1: Lantana
+  2: Parkinsonia
+  3: Parthenium
+  4: Pear
+  5: Prickly_Acacia
+  6: Rubber_Vine
+  7: Siam_Weed
+
+# Dataset info
+info: |
+  DeepWeeds dataset contains 8 weed species from Australian rangelands.
+  Images collected across different environments and seasons.
+
+  Dataset characteristics:
+  - 8 weed species
+  - 17,509 training images 
+  - Various environmental conditions
+  - Different lighting and seasonal conditions
+  - Mobile device captured images
+  - Image classification and detection annotations
+
+  Species details:
+  - Chinee Apple: Ziziphus mauritiana
+  - Lantana: Lantana camara  
+  - Parkinsonia: Parkinsonia aculeata
+  - Parthenium: Parthenium hysterophorus
+  - Pear: Opuntia species
+  - Prickly Acacia: Vachellia nilotica
+  - Rubber Vine: Cryptostegia grandiflora
+  - Siam Weed: Chromolaena odorata
