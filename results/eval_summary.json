@@ -1,0 +1,13 @@
+[
+  {
+    "metrics/precision(B)": 0.0033333333333333335,
+    "metrics/recall(B)": 1.0,
+    "metrics/mAP50(B)": 0.5307142857142855,
+    "metrics/mAP50-95(B)": 0.5035438042620364,
+    "fitness": 0.5062608524072614,
+    "latency_ms": 133.749737739563,
+    "p95_ms": 183.9919090270996,
+    "fps": 7.476650174426482,
+    "model_path": "results\\runs\\yolov8n\\weights\\best.pt"
+  }
+]

@@ -1,0 +1,17 @@
+torch>=2.2.0
+torchvision>=0.17.0
+tqdm
+pandas
+numpy
+yaml
+pyyaml
+opencv-python
+requests
+scikit-learn
+matplotlib
+seaborn
+onnx
+onnxruntime
+psutil
+pynvml
+ultralytics>=8.1.0

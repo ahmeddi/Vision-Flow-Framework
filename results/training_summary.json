@@ -1,0 +1,11 @@
+[
+  {
+    "metrics/precision(B)": 0.0033333333333333335,
+    "metrics/recall(B)": 1.0,
+    "metrics/mAP50(B)": 0.5307142857142855,
+    "metrics/mAP50-95(B)": 0.5035438042620364,
+    "fitness": 0.5062608524072614,
+    "model": "yolov8n.pt",
+    "train_time_s": 35.96546816825867
+  }
+]

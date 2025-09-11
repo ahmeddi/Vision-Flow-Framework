@@ -1,0 +1,28 @@
+# Base training config
+seed: 42
+img_size: 640
+batch_size: 16
+epochs: 1 # reduced for smoke test; restore to 50 for real training
+optimizer: "SGD"
+learning_rate: 0.01
+momentum: 0.937
+weight_decay: 0.0005
+warmup_epochs: 3
+scheduler: "cosine"
+patience: 20
+augmentations:
+  mosaic: true
+  mixup: true
+  hsv: true
+  flipud: 0.0
+  fliplr: 0.5
+  degrees: 5.0
+  translate: 0.05
+  scale: 0.5
+  shear: 2.0
+  perspective: 0.0
+energy_logging:
+  enabled: true
+  interval_s: 1.0
+export:
+  formats: [onnx]

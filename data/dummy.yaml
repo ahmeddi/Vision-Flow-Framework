@@ -1,0 +1,7 @@
+# Minimal dummy dataset YAML for YOLO (adjust paths to real datasets later)
+# Use absolute path to avoid Ultralytics relocating under its default datasets dir.
+path: c:/Users/smart/Downloads/vff/data/dummy
+train: images/train
+val: images/val
+names:
+  0: weed
