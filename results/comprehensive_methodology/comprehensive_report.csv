@@ -1,0 +1,2 @@
+model_name,dataset_name,training_status,evaluation_status,fps,total_parameters,model_size_mb,training_time,experiment_id,timestamp
+best,dummy,success,success,0.0,0,5.95,42.48999214172363,yolov8n.pt_dummy,2025-09-16 13:49:52

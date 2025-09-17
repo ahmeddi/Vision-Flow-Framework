@@ -1,0 +1,5 @@
+model_name,dataset_name,training_status,map50,map50_95,fps,total_parameters,model_size_mb,training_time
+yolov8n,weed25,failed,0.0,0.0,0.0,0,0.0,4.827851295471191
+yolov8n,deepweeds,failed,0.0,0.0,0.0,0,0.0,5.138096570968628
+yolov8n,cwd30,failed,0.0,0.0,0.0,0,0.0,5.619745492935181
+yolov8n,weedsgalore,failed,0.0,0.0,0.0,0,0.0,6.229229688644409

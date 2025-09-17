@@ -1,0 +1,34 @@
+augmentation_preset: medium
+author: researcher
+batch_size: 16
+confidence_threshold: 0.25
+custom_augmentation: {}
+datasets:
+- dummy
+description: Quick validation of the complete framework
+device: auto
+epochs: 5
+exclude_datasets: []
+exclude_models: []
+experiment_name: quick_validation_demo
+generate_plots: true
+generate_reports: true
+image_size: 640
+iou_threshold: 0.7
+learning_rate: 0.01
+max_detections: 300
+max_memory_gb: 16.0
+max_training_time_hours: 24.0
+model_families: []
+models:
+- yolov8n
+- yolov11n
+momentum: 0.937
+optimizer: auto
+output_dir: results/experiments/quick_validation_demo
+parallel_experiments: 1
+patience: 3
+save_models: true
+save_predictions: true
+timestamp: '2025-09-16T14:31:58.926437'
+weight_decay: 0.0005

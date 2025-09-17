@@ -1,0 +1,33 @@
+{
+  "top_models_by_map50": [
+    {
+      "model_name": "yolov8n.pt",
+      "dataset_name": "Dummy",
+      "map50": 0.995
+    }
+  ],
+  "top_models_by_fps": [
+    {
+      "model_name": "yolov8n.pt",
+      "dataset_name": "Dummy",
+      "fps": 7.614080853354246
+    }
+  ],
+  "best_per_dataset": [
+    {
+      "dataset_name": "Dummy",
+      "model_name": "yolov8n.pt",
+      "map50": 0.995
+    }
+  ],
+  "model_family_performance": {
+    "yolov8": {
+      "map50_mean": 0.995,
+      "map50_std": NaN,
+      "fps_mean": 7.614,
+      "fps_std": NaN,
+      "size_mean": 5.955,
+      "size_std": NaN
+    }
+  }
+}

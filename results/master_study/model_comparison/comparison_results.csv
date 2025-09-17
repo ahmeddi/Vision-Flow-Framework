@@ -1,0 +1,2 @@
+model_name,dataset_name,map50,map50_95,precision,recall,f1_score,inference_time,fps,model_size_mb,memory_usage_mb,training_time_hours,convergence_epoch,best_epoch
+yolov8n.pt,Dummy,0.995,0.9450424999999999,0.0033333333333333335,1.0,0.006644518272425249,131.33561611175537,7.614080853354246,5.955423355102539,22.932762145996094,0.008850502371788025,5,5

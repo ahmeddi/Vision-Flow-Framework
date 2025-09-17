@@ -1,0 +1,15 @@
+[
+  {
+    "model": "yolov8n.pt",
+    "architecture": "YOLO",
+    "training_time_seconds": 29.975460529327393,
+    "total_parameters": 3011043,
+    "model_size_mb": 5.954874038696289,
+    "final_map50": 0.995,
+    "final_map50_95": 0.9450424999999999,
+    "precision": 0.0,
+    "recall": 0.0,
+    "best_weights": "results\\comprehensive_methodology\\yolov8n.pt_dummy\\yolov8n3\\weights\\best.pt",
+    "save_dir": "results\\comprehensive_methodology\\yolov8n.pt_dummy\\yolov8n3"
+  }
+]

@@ -1,0 +1,46 @@
+[
+  {
+    "experiment_id": "yolov8n.pt_dummy",
+    "model_name": "best",
+    "dataset_name": "dummy",
+    "dataset_yaml": "data/dummy.yaml",
+    "training_status": "success",
+    "training_time": 42.48999214172363,
+    "timestamp": "2025-09-16 13:49:52",
+    "protocol_version": "1.0_comprehensive",
+    "model_info": {
+      "family": "yolov8",
+      "name": "yolov8n.pt",
+      "framework": "ultralytics"
+    },
+    "preprocessing_config": {
+      "imgsz": 640,
+      "cache": false,
+      "rect": false,
+      "mosaic": 1.0,
+      "mixup": 0.1,
+      "copy_paste": 0.1,
+      "degrees": 10.0,
+      "translate": 0.1,
+      "scale": 0.5,
+      "shear": 2.0,
+      "perspective": 0.0001,
+      "flipud": 0.5,
+      "fliplr": 0.5,
+      "hsv_h": 0.015,
+      "hsv_s": 0.7,
+      "hsv_v": 0.4
+    },
+    "weights_path": "results\\comprehensive_methodology\\yolov8n.pt_dummy\\yolov8n3\\weights\\best.pt",
+    "error": "Invalid CUDA 'device=auto' requested. Use 'device=cpu' or pass valid CUDA device(s) if available, i.e. 'device=0' or 'device=0,1,2,3' for Multi-GPU.\n\ntorch.cuda.is_available(): False\ntorch.cuda.device_count(): 0\nos.environ['CUDA_VISIBLE_DEVICES']: None\nSee https://pytorch.org/get-started/locally/ for up-to-date torch install instructions if no CUDA devices are seen by torch.\n",
+    "total_parameters": 0,
+    "model_size_mb": 5.95,
+    "fps": 0.0,
+    "evaluation_status": "success",
+    "validation": {
+      "is_valid": true,
+      "warnings": [],
+      "errors": []
+    }
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "model_name": "yolov8n.pt",
+    "dataset_name": "DeepWeeds",
+    "map50": 0.015805537905801952,
+    "map50_95": 0.003331671333965977,
+    "precision": 0.0004098763595007613,
+    "recall": 0.10416666666666666,
+    "f1_score": 0.0008165397875884893,
+    "inference_time": 120.8214282989502,
+    "fps": 8.276677523838616,
+    "model_size_mb": 5.946329116821289,
+    "memory_usage_mb": 22.94317626953125,
+    "training_time_hours": 0.3700902486509747,
+    "convergence_epoch": 15,
+    "best_epoch": 15
+  },
+  {
+    "model_name": "yolov11n",
+    "dataset_name": "deepweeds",
+    "map50": 0.0,
+    "map50_95": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1_score": 0.0,
+    "inference_time": 0.0,
+    "fps": 0.0,
+    "model_size_mb": 0.0,
+    "memory_usage_mb": 0.0,
+    "training_time_hours": 0.00018730547693040635,
+    "convergence_epoch": 0,
+    "best_epoch": 0
+  }
+]

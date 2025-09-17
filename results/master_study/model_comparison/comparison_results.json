@@ -1,0 +1,18 @@
+[
+  {
+    "model_name": "yolov8n.pt",
+    "dataset_name": "Dummy",
+    "map50": 0.995,
+    "map50_95": 0.9450424999999999,
+    "precision": 0.0033333333333333335,
+    "recall": 1.0,
+    "f1_score": 0.006644518272425249,
+    "inference_time": 131.33561611175537,
+    "fps": 7.614080853354246,
+    "model_size_mb": 5.955423355102539,
+    "memory_usage_mb": 22.932762145996094,
+    "training_time_hours": 0.008850502371788025,
+    "convergence_epoch": 5,
+    "best_epoch": 5
+  }
+]

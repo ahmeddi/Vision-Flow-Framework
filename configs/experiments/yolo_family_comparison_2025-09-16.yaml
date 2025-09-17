@@ -1,0 +1,45 @@
+augmentation_preset: medium
+author: researcher
+batch_size: 16
+confidence_threshold: 0.25
+custom_augmentation: {}
+datasets:
+- weed25
+- deepweeds
+- cwd30
+- weedsgalore
+description: Comprehensive comparison of YOLOv8 and YOLOv11 models
+device: auto
+epochs: 100
+exclude_datasets: []
+exclude_models: []
+experiment_name: yolo_family_comparison
+generate_plots: true
+generate_reports: true
+image_size: 640
+iou_threshold: 0.7
+learning_rate: 0.01
+max_detections: 300
+max_memory_gb: 16.0
+max_training_time_hours: 24.0
+model_families: []
+models:
+- yolov8n
+- yolov8s
+- yolov8m
+- yolov8l
+- yolov8x
+- yolov11n
+- yolov11s
+- yolov11m
+- yolov11l
+- yolov11x
+momentum: 0.937
+optimizer: auto
+output_dir: results/experiments/yolo_family_comparison
+parallel_experiments: 1
+patience: 20
+save_models: true
+save_predictions: true
+timestamp: '2025-09-16T14:22:11.274118'
+weight_decay: 0.0005

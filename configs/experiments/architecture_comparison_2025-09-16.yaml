@@ -1,0 +1,46 @@
+augmentation_preset: agriculture_optimized
+author: researcher
+batch_size: 16
+confidence_threshold: 0.25
+custom_augmentation: {}
+datasets:
+- weed25
+- deepweeds
+- weedsgalore
+description: Compare different detection architectures (YOLO, EfficientDet, DETR)
+device: auto
+epochs: 150
+exclude_datasets: []
+exclude_models: []
+experiment_name: architecture_comparison
+generate_plots: true
+generate_reports: true
+image_size: 640
+iou_threshold: 0.7
+learning_rate: 0.01
+max_detections: 300
+max_memory_gb: 16.0
+max_training_time_hours: 24.0
+model_families: []
+models:
+- yolov8n
+- yolov8s
+- yolov8m
+- yolov11n
+- yolov11s
+- yolo_nas_s
+- yolo_nas_m
+- yolox_s
+- yolox_m
+- efficientdet_d0
+- efficientdet_d1
+- detr_resnet50
+momentum: 0.937
+optimizer: auto
+output_dir: results/experiments/architecture_comparison
+parallel_experiments: 1
+patience: 30
+save_models: true
+save_predictions: true
+timestamp: '2025-09-16T14:22:11.278640'
+weight_decay: 0.0005
