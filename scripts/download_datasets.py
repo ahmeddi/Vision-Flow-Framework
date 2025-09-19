@@ -10,6 +10,47 @@ from PIL import Image
 import yaml
 from dataset_converter import DatasetConverter
 
+
+def ensure_dir(path: Path):
+    """Ensure directory exists, create if it doesn't."""
+    path.mkdir(parents=True, exist_ok=True)
+
+
+def write_readme(dataset_dir: Path, dataset_name: str, dataset_info: dict):
+    """Write README file for the dataset."""
+    readme_content = f"""# {dataset_name.upper()} Dataset
+
+## Information
+- **License**: {dataset_info.get('license', 'Unknown')}
+- **Format**: {dataset_info.get('format', 'Unknown')}
+- **Classes**: {dataset_info.get('num_classes', 'Unknown')}
+- **Images**: {dataset_info.get('num_images', 'Unknown')}
+
+## Notes
+{dataset_info.get('notes', 'No additional notes.')}
+
+## Citation
+{dataset_info.get('citation', 'Citation information not available.')}
+
+## Directory Structure
+```
+{dataset_name}/
+├── images/
+│   ├── train/
+│   ├── val/
+│   └── test/
+├── labels/
+│   ├── train/
+│   ├── val/
+│   └── test/
+├── data.yaml
+└── README.md
+```
+"""
+    
+    readme_path = dataset_dir / 'README.md'
+    readme_path.write_text(readme_content)
+
 DATASETS = {
     'deepweeds': {
         'url': 'https://nextcloud.qriscloud.org.au/index.php/s/a3KxPawpqkiorST/download',
@@ -424,14 +465,6 @@ def sample_dataset(dataset_dir: Path, sample_size: int) -> dict:
         'val_samples': len(sampled_images),
         'data_yaml': str(sampled_yaml)
     }
-        {key}/
-          images/train
-          images/val
-          images/test
-          labels/train
-          labels/val
-          labels/test
-        """))
 
 
 def attempt_download(url: str, dest: Path, filename: str = None):
