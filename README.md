@@ -4,7 +4,24 @@ Complete research framework for comparing YOLOv8, YOLOv11, and state-of-the-art 
 
 ## 🚀 Quick Start
 
-### Option 1: One-Command Setup (Recommended for new users)
+### 🌐 Option 1: Google Colab (No setup required!)
+
+**👆 Click here to run in Colab:** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ahmeddi/Vision-Flow-Framework/blob/main/VFF_Colab_Setup.ipynb)
+
+Or follow these steps:
+
+1. Open the `VFF_Colab_Setup.ipynb` notebook in Google Colab
+2. Run all cells (Runtime → Run all)
+3. Start training models immediately!
+
+**Colab advantages:**
+
+- ✅ Free GPU access
+- ✅ No installation required
+- ✅ Pre-configured environment
+- ✅ Automatic visualization
+
+### 💻 Option 2: Local Setup (Recommended for development)
 
 ```bash
 # Clone the repository
@@ -24,7 +41,7 @@ This will automatically:
 - ✅ Download sample datasets for testing
 - ✅ Verify everything is working correctly
 
-### Option 2: Manual Setup
+### 🔧 Option 3: Manual Setup
 
 #### 1. Download Pre-trained Models
 
