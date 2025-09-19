@@ -1,1 +1,0 @@
-# Real Weed Detection Analysis - Research Summary\n\n

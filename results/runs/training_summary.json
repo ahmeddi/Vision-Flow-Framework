@@ -1,7 +1,0 @@
-[
-  {
-    "model": "yolo_nas_s",
-    "error": "super-gradients package is required for YOLO-NAS models",
-    "training_time_seconds": 0.0004265308380126953
-  }
-]
