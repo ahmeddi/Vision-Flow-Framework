@@ -55,6 +55,14 @@ class YOLOXWrapper:
         # Update number of classes
         self.exp.num_classes = self.num_classes
         
+        # Initialize fp16 attribute if missing
+        if not hasattr(self.exp, 'fp16'):
+            self.exp.fp16 = False
+            
+        # Initialize other required attributes
+        if not hasattr(self.exp, 'args'):
+            self.exp.args = None
+            
         # Initialize model
         self.model = self.exp.get_model()
     
@@ -107,8 +115,27 @@ class YOLOXWrapper:
         configure_nccl()
         configure_omp()
         
+        # Create args object for trainer
+        import argparse
+        args = argparse.Namespace()
+        args.experiment_name = f"{self.model_name}_training"
+        args.name = name
+        args.dist_backend = "nccl"
+        args.dist_url = None
+        args.batch_size = batch_size
+        args.devices = 1
+        args.exp_file = None
+        args.fp16 = False
+        args.cache = None
+        args.ckpt = None
+        args.start_epoch = None
+        args.num_machines = 1
+        args.machine_rank = 0
+        args.logger = "tensorboard"
+        args.occupy = False
+        
         # Initialize trainer
-        trainer = YOLOXTrainer(self.exp, None)
+        trainer = YOLOXTrainer(self.exp, args)
         
         # Note: This is a simplified implementation
         # Full YOLOX training requires proper data conversion and setup

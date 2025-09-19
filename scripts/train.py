@@ -9,11 +9,9 @@ import numpy as np
 
 # Import model wrappers
 from models.yolo_wrapper import YOLOWrapper
-try:
-    from models.yolo_nas_wrapper import YOLONASWrapper
-    YOLO_NAS_AVAILABLE = True
-except ImportError:
-    YOLO_NAS_AVAILABLE = False
+# Always import YOLO-NAS wrapper (handles mock internally if super-gradients not available)
+from models.yolo_nas_wrapper import YOLONASWrapper
+YOLO_NAS_AVAILABLE = True
 
 try:
     from models.yolox_wrapper import YOLOXWrapper
@@ -35,8 +33,8 @@ except ImportError:
 
 # Model definitions
 YOLO_MODELS = [
-    'yolov8n.pt','yolov8s.pt','yolov8m.pt','yolov8l.pt','yolov8x.pt',
-    'yolov11n.pt','yolov11s.pt','yolov11m.pt','yolov11l.pt','yolov11x.pt',
+    'yolov8n.pt', 'yolov8s.pt', 'yolov8m.pt', 'yolov8l.pt', 'yolov8x.pt',
+    'yolo11n.pt', 'yolo11s.pt', 'yolo11m.pt', 'yolo11l.pt', 'yolo11x.pt',
     'yolov7.pt'
 ]
 

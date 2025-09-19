@@ -178,7 +178,7 @@ class EfficientDetWrapper:
                 self.model.load_state_dict(checkpoint)
         
         # Create prediction model wrapper
-        pred_model = DetBenchPredict(self.model, self.config)
+        pred_model = DetBenchPredict(self.model)
         pred_model = pred_model.to(device)
         pred_model.eval()
         
@@ -207,7 +207,7 @@ class EfficientDetWrapper:
                 self.model.load_state_dict(checkpoint)
         
         # Create prediction model wrapper
-        pred_model = DetBenchPredict(self.model, self.config)
+        pred_model = DetBenchPredict(self.model)
         pred_model = pred_model.to(device)
         pred_model.eval()
         
@@ -258,7 +258,7 @@ class EfficientDetWrapper:
         
         if format == 'onnx':
             # Create prediction model for export
-            pred_model = DetBenchPredict(self.model, self.config)
+            pred_model = DetBenchPredict(self.model)
             dummy_input = torch.randn(1, 3, self.config.image_size, self.config.image_size)
             
             torch.onnx.export(
