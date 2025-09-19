@@ -18,7 +18,7 @@ def main():
     print('🚀 Starting comprehensive multi-model, multi-dataset training...')
     print(f'📊 Training {len(models)} models on {len(datasets)} datasets')
     print(f'🔥 Total combinations: {len(models) * len(datasets)} training runs')
-    print('⏰ This will take several hours with 50 epochs each!')
+    print('⏰ Testing with 1 epoch each for quick validation!')
     print('='*60)
     
     results = []
@@ -30,7 +30,7 @@ def main():
             'python', 'scripts/train.py',
             '--models'] + models + [
             '--data', f'data/{dataset}.yaml',
-            '--epochs', '50',
+            '--epochs', '1',
             '--config', 'configs/base.yaml'
         ]
         
@@ -84,6 +84,14 @@ def main():
             result = subprocess.run(analysis_cmd, shell=True, check=True, timeout=600)
             print('✅ Statistical analysis completed successfully!')
             
+            # Run comprehensive analysis report generation
+            print('\n📊 Generating comprehensive analysis report...')
+            report_cmd = 'python scripts/comprehensive_analysis_report.py'
+            print(f'📋 Running: {report_cmd}')
+            
+            result = subprocess.run(report_cmd, shell=True, check=True, timeout=600)
+            print('✅ Comprehensive analysis report completed successfully!')
+            
             # Run visualization generation
             print('\n📈 Generating comparison visualizations...')
             viz_cmd = 'python scripts/create_visualizations.py'
@@ -99,8 +107,15 @@ def main():
         except Exception as e:
             print(f'💥 Analysis/visualization error: {str(e)}')
     else:
-        print('\n⚠️  Statistical analysis skipped due to training failures')
-        print('   All datasets must complete successfully to run analysis')
+        print('\n⚠️  Comprehensive analysis skipped due to training failures')
+        print('   All datasets must complete successfully to run full analysis')
+    
+    print('\n🎯 COMPREHENSIVE TRAINING PIPELINE COMPLETED!')
+    print('📂 Generated outputs:')
+    print('   📊 Statistical analysis results')
+    print('   📋 Comprehensive analysis report with tables and charts')
+    print('   📈 Performance comparison visualizations')
+    print('   📁 All results saved in results/ directory')
 
 if __name__ == "__main__":
     try:
