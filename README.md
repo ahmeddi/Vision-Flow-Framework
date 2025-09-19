@@ -4,17 +4,69 @@ Complete research framework for comparing YOLOv8, YOLOv11, and state-of-the-art 
 
 ## 🚀 Quick Start
 
-### 1. Setup Environment
+### Option 1: One-Command Setup (Recommended for new users)
 
 ```bash
+# Clone the repository
+git clone https://github.com/ahmeddi/Vision-Flow-Framework.git
+cd Vision-Flow-Framework
+
 # Install dependencies
 pip install -r requirements.txt
 
+# Run automated setup (downloads models + datasets)
+python setup_vff.py
+```
+
+This will automatically:
+
+- ✅ Download essential pre-trained models (YOLOv8n, YOLO11n)
+- ✅ Download sample datasets for testing
+- ✅ Verify everything is working correctly
+
+### Option 2: Manual Setup
+
+#### 1. Download Pre-trained Models
+
+```bash
+# Download essential models (recommended for beginners)
+python scripts/download_models.py --set essential
+
+# Download research models (YOLOv8 + YOLO11 variants)
+python scripts/download_models.py --set research
+
+# Download specific models
+python scripts/download_models.py --models yolov8n.pt yolov8s.pt yolo11n.pt
+
+# See all available models
+python scripts/download_models.py --list
+```
+
+**Available Model Sets:**
+
+- `essential`: Basic models for quick testing (YOLOv8n, YOLO11n)
+- `research`: Recommended for research (includes small/nano variants)
+- `full_yolo`: All YOLO variants (v8 + v11)
+- `all`: Every supported model architecture
+
+#### 2. Download Datasets
+
+```bash
 # Generate demo dataset (for testing)
 python scripts/generate_dummy_data.py --n_train 20 --n_val 10
 
 # Download real datasets
 python scripts/download_datasets.py --datasets deepweeds sample_weeds --sample 50
+```
+
+#### 3. Verify Setup
+
+```bash
+# Test model availability
+python scripts/test_models_availability.py
+
+# Test datasets
+python scripts/test_datasets_availability.py
 ```
 
 ### 2. Train Models
