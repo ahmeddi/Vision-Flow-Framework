@@ -6,11 +6,11 @@ Complete research framework for comparing YOLOv8, YOLOv11, and state-of-the-art 
 
 ### 🌐 Option 1: Google Colab (No setup required!)
 
-**👆 Click here to run in Colab:** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ahmeddi/Vision-Flow-Framework/blob/main/VFF_Colab_Setup.ipynb)
+**👆 Click here to run in Colab:** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ahmeddi/Vision-Flow-Framework/blob/main/docs/notebooks/VFF_Colab_Setup.ipynb)
 
 Or follow these steps:
 
-1. Open the `VFF_Colab_Setup.ipynb` notebook in Google Colab
+1. Open the `docs/notebooks/VFF_Colab_Setup.ipynb` notebook in Google Colab
 2. Run all cells (Runtime → Run all)
 3. Start training models immediately!
 
@@ -28,12 +28,16 @@ Or follow these steps:
 git clone https://github.com/ahmeddi/Vision-Flow-Framework.git
 cd Vision-Flow-Framework
 
-# Install dependencies
-pip install -r requirements.txt
+# Install dependencies (choose one)
+pip install -r requirements-minimal.txt  # Core features only (recommended)
+# OR
+pip install -r requirements.txt          # Full installation with optional packages
 
 # Run automated setup (downloads models + datasets)
-python setup_vff.py
+python3 scripts/setup_vff.py
 ```
+
+**See [INSTALL.md](INSTALL.md) for detailed installation instructions and troubleshooting.**
 
 This will automatically:
 
@@ -80,10 +84,13 @@ python scripts/download_datasets.py --datasets deepweeds sample_weeds --sample 5
 
 ```bash
 # Test model availability
-python scripts/test_models_availability.py
+python tests/test_models_availability.py
 
 # Test datasets
-python scripts/test_datasets_availability.py
+python tests/test_datasets_availability.py
+
+# Run comprehensive tests
+python tests/test_project.py
 ```
 
 ### 2. Train Models
@@ -122,33 +129,59 @@ python scripts/quantize.py --model results/runs/yolov8n/weights/best.pt --format
 ## 📊 Project Structure
 
 ```
-vff/
-├── configs/
-│   └── base.yaml              # Training hyperparameters
-├── data/
+Vision-Flow-Framework/
+├── configs/                   # Configuration files
+│   ├── base.yaml              # Training hyperparameters
+│   └── experiments/           # Experiment configurations
+├── data/                      # Datasets
 │   ├── dummy/                 # Generated test dataset
 │   ├── sample_weeds/          # Downloaded sample dataset
+│   ├── deepweeds/             # DeepWeeds dataset
 │   ├── dummy.yaml             # YOLO dataset config
 │   └── sample_weeds.yaml      # Real dataset config
-├── scripts/
-│   ├── download_datasets.py   # Dataset acquisition
-│   ├── generate_dummy_data.py # Test data generation
+├── scripts/                   # Training and analysis scripts
 │   ├── train.py               # Unified training script
 │   ├── evaluate.py            # Performance evaluation
+│   ├── download_datasets.py   # Dataset acquisition
+│   ├── download_models.py     # Model download utility
+│   ├── generate_dummy_data.py # Test data generation
 │   ├── energy_logger.py       # Energy consumption measurement
 │   ├── perturb_eval.py        # Robustness testing
 │   ├── prune.py               # Model pruning
-│   └── quantize.py            # Model quantization
-├── results/
+│   ├── quantize.py            # Model quantization
+│   ├── advanced_evaluator.py  # Comprehensive metrics
+│   ├── advanced_visualizer.py # Publication-quality plots
+│   └── models/                # Model wrappers
+├── tests/                     # Test suite
+│   ├── test_project.py        # Comprehensive system tests
+│   ├── test_models_availability.py
+│   ├── test_datasets_availability.py
+│   └── validate_paper_setup.py
+├── docs/                      # Documentation
+│   ├── guides/                # User guides and tutorials
+│   │   ├── VFF_SIMPLE_GUIDE.md
+│   │   ├── DEVELOPER_GUIDE_DETAILED.md
+│   │   ├── INSTALLATION_ARCHITECTURES_COMPLETE.md
+│   │   └── MODEL_DOWNLOAD_GUIDE.md
+│   ├── notebooks/             # Jupyter notebooks
+│   │   ├── VFF_Colab_Setup.ipynb
+│   │   └── VFF_GPU_Training_Complete.ipynb
+│   ├── paper/                 # Research paper materials
+│   │   ├── paper_outline.md
+│   │   ├── ARTICLE_INTRODUCTION.md
+│   │   └── PROJECT_PAPER_ANALYSIS.md
+│   └── reports/               # Analysis reports
+│       ├── METHODOLOGY_VALIDATION_REPORT.md
+│       ├── TRAINING_RESULTS_SUMMARY.md
+│       └── PROJECT_COMPLETION_SUMMARY.md
+├── results/                   # Generated results
 │   ├── runs/                  # Training outputs
-│   ├── tables/               # Results tables
-│   ├── figures/              # Generated plots
-│   ├── training_summary.json # Training metrics
-│   └── eval_summary.json     # Evaluation results
-├── models/                    # Optimized models
-├── paper_outline.md          # Research paper structure
-├── requirements.txt          # Python dependencies
-└── README.md                 # This file
+│   ├── tables/                # Results tables
+│   └── figures/               # Generated plots
+├── master_framework.py        # Main orchestration script
+├── requirements.txt           # Python dependencies
+├── README.md                  # This file
+└── README_FR.md               # French documentation
 ```
 
 ## 🎯 Supported Models
