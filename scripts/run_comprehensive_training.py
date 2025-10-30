@@ -18,7 +18,7 @@ def main():
     print('🚀 Starting comprehensive multi-model, multi-dataset training...')
     print(f'📊 Training {len(models)} models on {len(datasets)} datasets')
     print(f'🔥 Total combinations: {len(models) * len(datasets)} training runs')
-    print('⏰ Testing with 1 epoch each for quick validation!')
+    print('⏰ Testing with 100 epochs each for quick validation!')
     print('='*60)
     
     results = []
@@ -30,7 +30,7 @@ def main():
             'python', 'scripts/train.py',
             '--models'] + models + [
             '--data', f'data/{dataset}.yaml',
-            '--epochs', '1',
+            '--epochs', '100',
             '--config', 'configs/base.yaml'
         ]
         
