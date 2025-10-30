@@ -2,7 +2,7 @@
 # 25 species of common weeds for agricultural detection
 # Dataset: https://github.com/weed25/weed25-dataset
 
-path: c:/Users/smart/Downloads/vff/data/weed25
+path: data/weed25
 train: images/train
 val: images/val
 test: images/test

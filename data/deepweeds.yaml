@@ -2,7 +2,7 @@
 # 8 weed species from Australian rangelands
 # Dataset: https://github.com/AlexOlsen/DeepWeeds
 
-path: c:/Users/smart/Downloads/vff/data/deepweeds
+path: data/deepweeds
 train: images/train
 val: images/val
 test: images/test

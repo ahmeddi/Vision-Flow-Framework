@@ -2,7 +2,7 @@
 # Crop and Weed Detection with 30 classes (20 weeds + 10 crops)
 # Dataset: Comprehensive agricultural detection dataset
 
-path: c:/Users/smart/Downloads/vff/data/cwd30
+path: data/cwd30
 train: images/train
 val: images/val
 test: images/test

@@ -1,5 +1,5 @@
 # Sample COCO dataset - using original 80 classes to match labels
-path: c:/Users/smart/Downloads/vff/data/sample_weeds/coco8
+path: data/sample_weeds/coco8
 train: images/train
 val: images/val
 

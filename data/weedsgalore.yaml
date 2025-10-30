@@ -2,7 +2,7 @@
 # Multispectral UAV imagery for weed detection in precision agriculture
 # Dataset: Drone-acquired multispectral data with RGB + NIR channels
 
-path: c:/Users/smart/Downloads/vff/data/weedsgalore
+path: data/weedsgalore
 train: images/train
 val: images/val
 test: images/test

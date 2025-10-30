@@ -194,8 +194,8 @@ vff/
 **Dataset YAML Structure:**
 
 ```yaml
-# Must use absolute paths to prevent Ultralytics auto-relocation
-path: c:/Users/smart/Downloads/vff/data/dummy
+# Using relative paths from project root
+path: data/dummy
 train: images/train
 val: images/val
 names:
